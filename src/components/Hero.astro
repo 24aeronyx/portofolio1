@@ -1,0 +1,49 @@
+---
+// Import komponen Image bawaan Astro untuk optimasi
+import { Image } from 'astro:assets';
+
+// Import file foto dari folder public/
+import fotoAriel from '../../public/foto-ariel.png';
+---
+
+<section class="relative w-full max-w-7xl mx-auto px-4 flex flex-col items-center justify-start min-h-[calc(100vh-88px)] overflow-hidden pt-16 pb-24">
+  
+  <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] md:w-[700px] h-[400px] md:h-[700px] bg-orange-500/10 rounded-full blur-[150px] -z-20"></div>
+
+  <div class="relative w-full max-w-5xl flex flex-col items-center justify-center h-[320px] sm:h-[400px] md:h-[520px]">
+    
+    <div class="absolute inset-0 flex flex-col items-center justify-center text-center z-10 select-none pointer-events-none tracking-tighter uppercase font-black -mt-12 md:-mt-20">
+      <h1 class="text-[11vw] md:text-[8vw] text-white/95 leading-[0.85]">
+        I'M <span class="text-orange-500">ARIEL</span>
+      </h1>
+      <h2 class="text-[9vw] md:text-[6.5vw] text-white/95 leading-[0.85]">
+        FULLSTACK DEVELOPER
+      </h2>
+    </div>
+
+    <div class="absolute bottom-0 w-[260px] sm:w-[360px] md:w-[480px] h-[260px] sm:h-[360px] md:h-[480px] flex justify-center items-end z-20 overflow-visible">
+      
+      <div class="absolute bottom-0 w-full h-full bg-gradient-to-t from-orange-500/30 via-orange-500/10 to-transparent rounded-full border border-orange-500/20 z-10"></div>
+      
+      <Image 
+        src={fotoAriel} 
+        alt="Ariel" 
+        class="h-[110%] w-auto object-contain z-30 filter drop-shadow-[0_15px_30px_rgba(0,0,0,0.5)] transform translate-y-2"
+        format="png" 
+      />
+    </div>
+
+  </div>
+  <p class="text-slate-400 text-center text-xs sm:text-sm md:text-base max-w-md mx-auto leading-relaxed px-4 z-40 mt-6 md:mt-10">
+    Membangun sistem informasi dan aplikasi web yang super ringan, efisien, dan siap dipasarkan.
+  </p>
+
+  <div class="flex items-center gap-4 z-40 mt-6 md:mt-8">
+    <a href="#projects" class="bg-orange-500 hover:bg-orange-600 text-slate-950 font-bold px-8 py-3.5 rounded-full transition-all shadow-lg shadow-orange-500/20 flex items-center gap-2 group">
+      Portfolio <span class="inline-block transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
+    </a>
+    <a href="#" class="bg-transparent border border-slate-700 hover:border-white text-white font-medium px-8 py-3.5 rounded-full transition-all">
+      Hire me
+    </a>
+  </div>
+</section>
